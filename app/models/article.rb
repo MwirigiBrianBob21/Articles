@@ -18,6 +18,17 @@ class Article
         end
     end
 
+    # Returns the 
+    # author & magazine (author.name) for that given article
+
+    def author
+        @author.name
+    end
+
+    def magazine
+        @magazine.name
+    end
+
     def self.all
         @all
     end

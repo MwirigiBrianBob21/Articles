@@ -13,11 +13,19 @@ if (name.is_a?(String) && category.is_a?(String))
     @name = name
     @category = category
 
+    # contributors arr
+    @contributors = []
+
     @@all << self
     else
       raise InitializationError
     end
 
+  end
+
+  # Returns an array of Author instances who have written for this magazine
+  def contributors
+    @contributors
   end
 
   # Returns an array of all Magazine instances
