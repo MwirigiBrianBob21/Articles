@@ -27,7 +27,9 @@ if (name.is_a?(String) && category.is_a?(String))
   end
 
   class InitializationError < ArgumentError
-    
+    def message
+      "Expected string for each of name and category"
+    end
   end
 
 

@@ -18,6 +18,8 @@ class Author
 
 
 class InitializationError < ArgumentError
- 
+  def message
+    "Expected a string for author's name"
+  end
 end
 end

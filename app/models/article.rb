@@ -23,7 +23,9 @@ class Article
     end
 
     class InitializationError < ArgumentError
-        
+        def message
+            "Expected an Author, Magazine, and String for title"
+        end
     end
 
 
