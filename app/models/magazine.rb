@@ -23,7 +23,8 @@ class Magazine
 
   end
 
-  # Returns an array of Author instances who have written for this magazine
+  # Returns an array of Author 
+  # instances who have written for this magazine
   def contributors
     @contributors
   end
@@ -79,7 +80,7 @@ class Magazine
 
     class InitializationError < ArgumentError
       def message
-        "Expected string for each of name and category"
+        "Expected name and category as strings"
       end
     end
   end

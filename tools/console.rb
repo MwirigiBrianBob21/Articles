@@ -22,11 +22,12 @@ rats2 = Magazine.new("Don't cry", "novel")
 
 
 # add_article(magazine, title)
-margaret.add_article(rats, "sequel")
-margaret.add_article(rats2, "sequel")
+margaret.add_article(rats, "Accept change in life")
+margaret.add_article( rats2, "Life after high schoo")
+mutua.add_article(rats2, "Mutua is irrelevant always")
 
 
-margaret.topic_areas
+
 
 
 
