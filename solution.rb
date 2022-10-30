@@ -70,7 +70,7 @@ class Magazine
     end
   
 
-    # ---------------------------------------------------------
+    # ------------------------------AUTHOR CLASS---------------------------
     class Author
         attr_accessor :name
         attr_reader :name
@@ -119,7 +119,7 @@ class Magazine
       end
       end
 
-    #   ----------------------------------------------------------
+    #   -------------------------ARTICLE CLASS---------------------------------
     class Article
             attr_reader :title, :author, :magazine
         
