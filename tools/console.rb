@@ -10,13 +10,21 @@ end
 margaret = Author.new("Ogola")
 
 rats = Magazine.new("The river and the source", "novel")
+rats2 = Magazine.new("Don't cry", "novel")
+
 
 # def initialize( author, magazine, title)
 
 article = Article.new(margaret, rats, "the river and the source")
+article = Article.new(margaret, rats2, "Girl child")
+
 
 # add_article(magazine, title)
 margaret.add_article(rats, "sequel")
+margaret.add_article(rats2, "sequel")
+
+
+puts margaret.topic_areas
 
 
 

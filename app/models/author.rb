@@ -46,10 +46,11 @@ end
   # - Returns a **unique** array of strings 
   # with the categories of the magazines the author has contributed to
   def topic_areas
+    topic = []
     @magazines.collect do |magazine|
-      topic = magazine.category
-      return topic.uniq
+     topic << magazine.category   
     end
+    return topic.uniq
   end
 
 class InitializationError < ArgumentError
