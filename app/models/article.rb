@@ -1,7 +1,7 @@
 class Article
 #     An article is initialized with an author as an Author object, a magazine as a Magazine object, and title as a string.
 # An article cannot change its author, magazine, or title after it is has been initialized.
-    attr_reader :title
+    attr_reader :title, :author, :magazine
 
     @@all = []
 
@@ -19,25 +19,26 @@ class Article
     end
 
     # Returns the 
-    # author & magazine (author.name) for that given article
+    # author & magazine (author) for that given article
 
-    def author
-        @author.name
-    end
+    # def author
+    #     @author.name
+    # end
 
-    def magazine
-        @magazine.name
-    end
+    # def magazine
+    #     @magazine.name
+    # end
 
     def self.all
-        @all
-    end
+        @@all
+    end  
+    
 
     class InitializationError < ArgumentError
         def message
             "Expected an Author, Magazine, and String for title"
         end
     end
-
+        @@all
 
 end

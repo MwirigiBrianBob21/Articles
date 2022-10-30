@@ -29,6 +29,28 @@ def magazines
   @magazines.uniq
 end
 
+# Author#add_article(magazine, title)
+# Given a magazine (as Magazine instance) and a title (as a string), 
+# creates a new Article instance and associates it with that author and that magazine.
+ def add_article(magazine, title)
+    if(magazine.is_a?(Magazine) && title.is_a?(String))
+        @articles << Article.new(self, magazine, title)
+        @magazines << magazine
+      
+    else
+      raise ArgumentError
+    end
+  end
+
+  # `Author#topic_areas`
+  # - Returns a **unique** array of strings 
+  # with the categories of the magazines the author has contributed to
+  def topic_areas
+    @magazines.collect do |magazine|
+      topic = magazine.category
+      return topic.uniq
+    end
+  end
 
 class InitializationError < ArgumentError
   def message
