@@ -25,7 +25,10 @@ class Magazine
     # Returns an array of Author 
     # instances who have written for this magazine
     def contributors
-      @contributors
+      articles = Article.all.filter {|article| article.magazine == self}
+    articles.collect do |article|
+      article.author
+    end
     end
   
   

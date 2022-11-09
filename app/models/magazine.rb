@@ -12,10 +12,6 @@ class Magazine
 
     @name = name
     @category = category
-
-    # contributors arr
-    @contributors = []
-
     @@all << self
     else
       raise InitializationError
@@ -26,7 +22,12 @@ class Magazine
   # Returns an array of Author 
   # instances who have written for this magazine
   def contributors
-    @contributors
+    # @contributors
+    # contributors method
+    articles = Article.all.filter {|article| article.magazine == self}
+    articles.collect do |article|
+      article.author
+    end
   end
 
   # Returns an array of all Magazine instances
